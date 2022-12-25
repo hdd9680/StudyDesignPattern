@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HTMLBuilder extends Builder {
+public class HTMLBuilder implements Builder {
 	private String fileName;
 	private PrintWriter writer;
 	
