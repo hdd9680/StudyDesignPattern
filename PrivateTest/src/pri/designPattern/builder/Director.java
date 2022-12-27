@@ -1,4 +1,4 @@
-package pri.designPattern.Builder;
+package pri.designPattern.builder;
 
 public class Director {
 	

@@ -1,4 +1,4 @@
-package pri.designPattern.Builder;
+package pri.designPattern.builder;
 
 public interface Builder {
 	public abstract void makeTitle(String title);

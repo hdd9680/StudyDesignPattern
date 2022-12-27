@@ -1,4 +1,4 @@
-package pri.designPattern.Builder;
+package pri.designPattern.builder;
 
 import java.io.FileWriter;
 import java.io.IOException;
