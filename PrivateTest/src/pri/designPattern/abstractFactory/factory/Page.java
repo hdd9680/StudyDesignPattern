@@ -12,6 +12,8 @@ public abstract class Page {
 	protected String author;
 	protected List<Item> content = new ArrayList<>();
 	
+	private final String filePath = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\PrivateTest\\src\\pri\\designPattern\\abstractFactory\\";
+	
 	public Page(String title, String author) {
 		this.title = title;
 		this.author = author;
@@ -22,7 +24,7 @@ public abstract class Page {
 	}
 	
 	public void output() {
-		String fileName = title + ".html";
+		String fileName = filePath + title + ".html";
 		Writer writer;
 		try {
 			writer = new FileWriter(fileName);
