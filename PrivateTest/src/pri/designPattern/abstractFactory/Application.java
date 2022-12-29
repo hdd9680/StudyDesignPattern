@@ -1,7 +1,5 @@
 package pri.designPattern.abstractFactory;
 
-import java.util.Arrays;
-
 import pri.designPattern.abstractFactory.factory.Factory;
 import pri.designPattern.abstractFactory.factory.Link;
 import pri.designPattern.abstractFactory.factory.Page;
@@ -37,6 +35,7 @@ public class Application {
 		trayPortal.add(daum);
 		
 		Tray traySearch = factory.createTray("검색");
+		traySearch.add(trayPortal);
 		traySearch.add(excite);
 		traySearch.add(google);
 		

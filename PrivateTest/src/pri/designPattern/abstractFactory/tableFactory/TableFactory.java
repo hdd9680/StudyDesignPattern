@@ -1,25 +1,25 @@
-package pri.designPattern.abstractFactory.listFactory;
+package pri.designPattern.abstractFactory.tableFactory;
 
 import pri.designPattern.abstractFactory.factory.Factory;
 import pri.designPattern.abstractFactory.factory.Link;
 import pri.designPattern.abstractFactory.factory.Page;
 import pri.designPattern.abstractFactory.factory.Tray;
 
-public class ListFactory extends Factory {
-	
+public class TableFactory extends Factory {
+
 	@Override
 	public Link createLink(String caption, String url) {
-		return new ListLink(caption, url);
+		return new TableLink(caption, url);
 	}
 
 	@Override
 	public Tray createTray(String caption) {
-		return new ListTray(caption);
+		return new TableTray(caption);
 	}
 
 	@Override
 	public Page createPage(String title, String author) {
-		return new ListPage(title, author);
+		return new TablePage(title, author);
 	}
 
 	

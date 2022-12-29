@@ -2,7 +2,7 @@ package pri.designPattern.abstractFactory.factory;
 
 public abstract class Factory {
 	
-	private final static String packagePath = "pri.designPattern.abstractFactory.listFactory.";
+	private final static String packagePath = "pri.designPattern.abstractFactory.";
 	
 	public static Factory getFactory(String className) {
 		Factory factory = null;
