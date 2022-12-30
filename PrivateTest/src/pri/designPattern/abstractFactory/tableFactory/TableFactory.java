@@ -4,6 +4,7 @@ import pri.designPattern.abstractFactory.factory.Factory;
 import pri.designPattern.abstractFactory.factory.Link;
 import pri.designPattern.abstractFactory.factory.Page;
 import pri.designPattern.abstractFactory.factory.Tray;
+import pri.designPattern.abstractFactory.listFactory.ListPage;
 
 public class TableFactory extends Factory {
 
@@ -22,5 +23,4 @@ public class TableFactory extends Factory {
 		return new TablePage(title, author);
 	}
 
-	
 }

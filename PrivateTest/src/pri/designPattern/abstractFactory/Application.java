@@ -45,6 +45,9 @@ public class Application {
 		page.add(traySearch);
 		page.output();
 		
+		Page naverPage = factory.createNaver();
+		naverPage.output();
+		
 	}
 
 }

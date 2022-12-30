@@ -22,5 +22,4 @@ public class ListFactory extends Factory {
 		return new ListPage(title, author);
 	}
 
-	
 }
