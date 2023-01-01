@@ -1,4 +1,6 @@
-package pri.designPattern.bridge;
+package pri.designPattern.bridge.abst;
+
+import pri.designPattern.bridge.impl.DisplayImpl;
 
 public class Display {
 	private DisplayImpl impl;
@@ -7,15 +9,15 @@ public class Display {
 		this.impl = impl;
 	}
 	
-	public void open() {
+	protected void open() {
 		impl.rawOpen();
 	}
 	
-	public void print() {
+	protected void print() {
 		impl.rawPrint();
 	}
 	
-	public void close() {
+	protected void close() {
 		impl.rawClose();
 	}
 	

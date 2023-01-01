@@ -1,4 +1,6 @@
-package pri.designPattern.bridge;
+package pri.designPattern.bridge.abst;
+
+import pri.designPattern.bridge.impl.DisplayImpl;
 
 public class CountDisplay extends Display {
 

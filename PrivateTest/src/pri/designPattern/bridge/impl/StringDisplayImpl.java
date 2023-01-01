@@ -1,6 +1,6 @@
-package pri.designPattern.bridge;
+package pri.designPattern.bridge.impl;
 
-public class StringDisplayImpl extends DisplayImpl{
+public class StringDisplayImpl extends DisplayImpl {
 
 	private String string;
 	private int width;

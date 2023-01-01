@@ -1,4 +1,4 @@
-package pri.designPattern.bridge;
+package pri.designPattern.bridge.impl;
 
 public abstract class DisplayImpl {
 	public abstract void rawOpen();

@@ -1,5 +1,13 @@
 package pri.designPattern.bridge;
 
+import pri.designPattern.bridge.abst.CountDisplay;
+import pri.designPattern.bridge.abst.Display;
+import pri.designPattern.bridge.abst.RandomDisplay;
+import pri.designPattern.bridge.abst.StairDisplay;
+import pri.designPattern.bridge.impl.CharDisplayImpl;
+import pri.designPattern.bridge.impl.StringDisplayImpl;
+import pri.designPattern.bridge.impl.TextFileDisplayImpl;
+
 public class Application {
 	
 	public static void main(String[] args) {
@@ -14,6 +22,15 @@ public class Application {
 		d3.display();
 		
 		d3.multiDisplay(5);
+		
+		RandomDisplay d4 = new RandomDisplay(new TextFileDisplayImpl("Test"));
+		d4.randomDisplay(5);
+		
+		StairDisplay d5 = new StairDisplay(new CharDisplayImpl('|', '#', '-'), 1);
+		d5.stairDisplay(4);
+		
+		StairDisplay d6 = new StairDisplay(new CharDisplayImpl('<', '*', '>'), 2);
+		d6.stairDisplay(6);
 		
 	}
 
