@@ -38,6 +38,7 @@ public class Directory extends Entry {
 	@Override
 	public Entry add(Entry entry) throws Exception {
 		entrys.add(entry);
+		entry.parent = this;
 		return this;
 	}
 	

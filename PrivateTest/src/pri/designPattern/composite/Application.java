@@ -32,6 +32,11 @@ public class Application {
 		
 		root.printList();
 		
+		System.out.println("===============================");
+		System.out.println(bin.getFullName());
+		System.out.println(kang.getFullName());
+		System.out.println(game.getFullName());
+		
 	}
 
 }
