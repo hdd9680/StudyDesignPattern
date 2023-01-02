@@ -4,10 +4,10 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		int seed1 = 0;
+		int seed1 = 2;
 		int seed2 = 2;
 		
-		Player player1 = new Player("홍길동", new WinningStrategy(seed1));
+		Player player1 = new Player("홍길동", new RandomStrategy(seed1));
 		Player player2 = new Player("임꺽정", new ProbStrategy(seed2));
 		
 		for(int i = 0 ; i < 10000 ; i++) {
