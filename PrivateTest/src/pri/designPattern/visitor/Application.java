@@ -1,5 +1,7 @@
 package pri.designPattern.visitor;
 
+import java.util.Iterator;
+
 public class Application {
 
 	public static void main(String[] args) throws Exception {
@@ -30,7 +32,23 @@ public class Application {
 		kang.add(game);
 		kang.add(junk);
 		
-		root.accept(new ListVisitor());
+		FileFindVisitor visitor = new FileFindVisitor(".java");
+		root.accept(visitor);
+		
+		Iterator<File> iterator = visitor.iterator();
+		
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next().getFullName());
+		}
+		
+		System.out.println("root 디렉토리 사이즈 : " + root.getSize());
+		
+		ArrayListAcceptor arrayListAcceptor = new ArrayListAcceptor();
+		arrayListAcceptor.add(root);
+		arrayListAcceptor.add(new File("etc.html", 1234));
+		
+		arrayListAcceptor.accept(new ListVisitor());
+		
 	}
 
 }

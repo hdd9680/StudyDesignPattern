@@ -21,7 +21,9 @@ public class Directory extends Entry {
 
 	@Override
 	public int getSize() {
-		return entrys.stream().mapToInt(each->each.getSize()).sum();
+		SizeVisitor sizeVisitor = new SizeVisitor();
+		accept(sizeVisitor);
+		return sizeVisitor.getSize();
 	}
 	
 	@Override
