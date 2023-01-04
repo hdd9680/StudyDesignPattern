@@ -7,6 +7,7 @@ import java.util.List;
 public class MultiStringDisplay extends Display {
 
 	private List<String> stringList;
+	private int maxColumns = 0;
 	
 	public MultiStringDisplay() {
 		stringList = new ArrayList<>();
@@ -14,19 +15,16 @@ public class MultiStringDisplay extends Display {
 	
 	public MultiStringDisplay(String... strings) {
 		stringList = new ArrayList<>(Arrays.asList(strings));
-	}
-	
-	@Override
-	public int getColumns() {
-		
-		int maxColumns = 0;
 		
 		for(String string : stringList) {
 			int stringLengh = string.getBytes().length;
 			
 			maxColumns = maxColumns < stringLengh ? stringLengh : maxColumns; 
 		}
-		
+	}
+	
+	@Override
+	public int getColumns() {
 		return maxColumns;
 	}
 
@@ -40,7 +38,6 @@ public class MultiStringDisplay extends Display {
 		
 		String string = stringList.get(row);
 		StringBuffer sb = new StringBuffer();
-		int maxColumns = getColumns();
 		
 		int columnsDistance = maxColumns - string.getBytes().length;
 		
@@ -53,6 +50,8 @@ public class MultiStringDisplay extends Display {
 	
 	public void add(String string) {
 		stringList.add(string);
+		int stringLengh = string.getBytes().length;
+		maxColumns = maxColumns < stringLengh ? stringLengh : maxColumns; 
 	}
 
 }
