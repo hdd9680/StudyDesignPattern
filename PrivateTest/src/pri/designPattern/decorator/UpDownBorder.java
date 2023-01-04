@@ -11,22 +11,22 @@ public class UpDownBorder extends Border {
 
 	@Override
 	public int getColumns() {
-		return display.getColumns();
+		return super.display.getColumns();
 	}
 
 	@Override
 	public int getRows() {
-		return 1 + display.getRows() + 1;
+		return 1 + super.display.getRows() + 1;
 	}
 
 	@Override
 	public String getRowText(int row) {
 		
-		if(row == 0 || (row == display.getRows() + 1)) {
-			return makeLine(this.ch, display.getColumns());
+		if(row == 0 || (row == super.display.getRows() + 1)) {
+			return makeLine(this.ch, super.display.getColumns());
 		}
 		
-		return display.getRowText(row - 1);
+		return super.display.getRowText(row - 1);
 	}
 
 	private String makeLine(char ch, int columns) {
