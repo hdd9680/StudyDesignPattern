@@ -3,27 +3,19 @@ package pri.designPattern.decorator;
 public class Application {
 	
 	public static void main(String[] args) {
-		Display b1 = new StringDisplay("Hello, World.");
-		Display b2 = new UpDownBorder(b1, '-');
-		Display b3 = new SideBorder(b2, '*');
+		MultiStringDisplay md = new MultiStringDisplay(
+			"Good Morning!",
+			"Hello~",
+			"GoodBye, See You Tomorrow."
+		);
 		
-		b1.show();
-		b2.show();
-		b3.show();
+		md.show();
 		
-		Display b4 = new FullBorder(
-						new UpDownBorder(
-							new SideBorder(
-								new UpDownBorder(
-									new SideBorder(
-										new StringDisplay("Hello.")
-									, '*')
-								,'=')
-							, '|')
-						, '/')
-					);
+		Display d1 = new SideBorder(md, '#');
+		d1.show();
 		
-		b4.show();
+		Display d2 = new FullBorder(md);
+		d2.show();
 	}
 
 }
