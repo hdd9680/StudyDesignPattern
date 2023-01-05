@@ -3,7 +3,7 @@ package pri.designPattern.facade.pageMaker;
 import java.io.IOException;
 import java.io.Writer;
 
-public class HtmlWriter {
+class HtmlWriter {
 	
 	private Writer writer;
 	

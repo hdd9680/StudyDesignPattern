@@ -3,7 +3,7 @@ package pri.designPattern.facade.pageMaker;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class Database {
+class Database {
 	
 	private static final String FILE_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\PrivateTest\\src\\pri\\designPattern\\facade\\";
 	
