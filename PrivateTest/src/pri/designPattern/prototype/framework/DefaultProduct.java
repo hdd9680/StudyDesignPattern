@@ -1,4 +1,4 @@
-package pri.designPattern.Prototype.framework;
+package pri.designPattern.prototype.framework;
 
 public abstract class DefaultProduct implements Product{
 

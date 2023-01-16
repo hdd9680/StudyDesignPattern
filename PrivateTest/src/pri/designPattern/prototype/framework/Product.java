@@ -1,4 +1,4 @@
-package pri.designPattern.Prototype.framework;
+package pri.designPattern.prototype.framework;
 
 public interface Product extends Cloneable {
 	

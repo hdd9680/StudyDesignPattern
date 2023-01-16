@@ -1,4 +1,4 @@
-package pri.designPattern.Prototype.framework;
+package pri.designPattern.prototype.framework;
 
 import java.util.Hashtable;
 

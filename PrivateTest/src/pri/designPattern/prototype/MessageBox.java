@@ -1,6 +1,6 @@
-package pri.designPattern.Prototype;
+package pri.designPattern.prototype;
 
-import pri.designPattern.Prototype.framework.DefaultProduct;
+import pri.designPattern.prototype.framework.DefaultProduct;
 
 public class MessageBox extends DefaultProduct {
 	

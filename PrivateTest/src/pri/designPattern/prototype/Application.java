@@ -1,7 +1,7 @@
-package pri.designPattern.Prototype;
+package pri.designPattern.prototype;
 
-import pri.designPattern.Prototype.framework.Manager;
-import pri.designPattern.Prototype.framework.Product;
+import pri.designPattern.prototype.framework.Manager;
+import pri.designPattern.prototype.framework.Product;
 
 public class Application {
 
