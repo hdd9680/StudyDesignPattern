@@ -1,9 +1,9 @@
 package pri.designPattern.state;
 
-public class DayState implements State {
+public class LunchState implements State {
 
-	private static DayState singleton = new DayState();
-	private DayState() {}
+	private static LunchState singleton = new LunchState();
+	private LunchState() {}
 	
 	public static State getInstance() {
 		return singleton;
@@ -11,33 +11,35 @@ public class DayState implements State {
 	
 	@Override
 	public void doClock(Context context, int hour) {
-		if(12 <= hour && hour <= 13) {
-			context.changeState(LunchState.getInstance());
-		}
-		
 		if(hour < 8 || 21 <= hour) {
 			context.changeState(NightState.getInstance());
+			return;
+		}
+		
+		if(8 <= hour && hour < 21) {
+			context.changeState(DayState.getInstance());
+			return;
 		}
 	}
 
 	@Override
 	public void doUse(Context context) {
-		context.recordLog("금고사용(주간)");
+		context.callSecurityCenter("비상:점심의 금고사용");
 	}
 
 	@Override
 	public void doAlarm(Context context) {
-		context.callSecurityCenter("비상벨(주간)");
+		context.callSecurityCenter("비상벨(점심)");
 	}
 
 	@Override
 	public void doPhone(Context context) {
-		context.callSecurityCenter("일반통화(주간)");
+		context.callSecurityCenter("점심의 통화 녹음");
 	}
 	
 	@Override
 	public String toString() {
-		return "[주간]";
+		return "[점심]";
 	}
 
 }
