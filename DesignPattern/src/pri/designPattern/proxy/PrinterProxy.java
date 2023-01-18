@@ -3,10 +3,12 @@ package pri.designPattern.proxy;
 public class PrinterProxy implements Printable {
 	
 	private String name;
-	private Printer realPrinter;
+	private Printable realPrinter;
+	private String className;
 	
-	public PrinterProxy(String name) {
+	public PrinterProxy(String name, String className) {
 		this.name = name;
+		this.className = className;
 	}
 	
 	@Override
@@ -30,7 +32,12 @@ public class PrinterProxy implements Printable {
 	
 	private synchronized void realize() {
 		if(realPrinter == null) {
-			realPrinter = new Printer(name);
+			try {
+				realPrinter = (Printable) Class.forName(className).getConstructor().newInstance();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	
