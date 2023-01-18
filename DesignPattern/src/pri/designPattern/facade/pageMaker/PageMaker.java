@@ -8,7 +8,7 @@ public class PageMaker {
 	
 	private PageMaker() {}
 	
-	private static final String File_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\PrivateTest\\src\\pri\\designPattern\\facade\\";
+	private static final String File_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\DesignPattern\\src\\pri\\designPattern\\facade\\";
 	
 	public static void makeWelcomPage(String mailAddr, String fileName) {
 		try {

@@ -8,7 +8,7 @@ public class HTMLBuilder implements Builder {
 	private String fileName;
 	private PrintWriter writer;
 	
-	private final String FILE_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\PrivateTest\\src\\pri\\designPattern\\Builder\\";
+	private final String FILE_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\DesignPattern\\src\\pri\\designPattern\\Builder\\";
 	
 	@Override
 	public void makeTitle(String title) {

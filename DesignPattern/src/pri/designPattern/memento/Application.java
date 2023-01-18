@@ -11,7 +11,7 @@ import pri.designPattern.memento.game.Memento;
 
 public class Application {
 	
-	private static final String FILE_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\PrivateTest\\src\\pri\\designPattern\\memento\\";
+	private static final String FILE_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\DesignPattern\\src\\pri\\designPattern\\memento\\";
 	
 	public static void main(String[] args) throws Exception {
 		

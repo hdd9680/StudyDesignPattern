@@ -10,7 +10,7 @@ public class TextFileDisplayImpl extends DisplayImpl {
 	private int width;
 	private FileWriter writer;
 	
-	private final String path = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\PrivateTest\\src\\pri\\designPattern\\bridge\\";
+	private final String path = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\DesignPattern\\src\\pri\\designPattern\\bridge\\";
 	
 	public TextFileDisplayImpl(String string) {
 		this.string = string;

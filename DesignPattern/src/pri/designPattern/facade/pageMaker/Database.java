@@ -5,7 +5,7 @@ import java.util.Properties;
 
 class Database {
 	
-	private static final String FILE_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\PrivateTest\\src\\pri\\designPattern\\facade\\";
+	private static final String FILE_PATH = "C:\\Users\\hdd96\\git\\StudyDesignPattern\\DesignPattern\\src\\pri\\designPattern\\facade\\";
 	
 	private Database() {
 		
