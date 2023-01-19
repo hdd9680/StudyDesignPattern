@@ -1,9 +1,10 @@
-package pri.designPattern.iterpreter;
+package pri.designPattern.iterpreter.language;
 
 import java.util.StringTokenizer;
 
 public class Context {
 	
+	private ExecutorFactory factory;
 	private StringTokenizer tokenizer;
 	private String currentToken;
 	
@@ -47,5 +48,12 @@ public class Context {
 		
 	}
 	
+	public void setExecutorFactory(ExecutorFactory factory) {
+		this.factory = factory;
+	}
+	
+	public Executor createExecutor(String name) {
+		return factory.createExecutor(name);
+	}
 	
 }

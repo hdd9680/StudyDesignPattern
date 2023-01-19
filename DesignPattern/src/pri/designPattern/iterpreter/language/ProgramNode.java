@@ -1,4 +1,4 @@
-package pri.designPattern.iterpreter;
+package pri.designPattern.iterpreter.language;
 
 public class ProgramNode extends Node {
 	
@@ -9,6 +9,11 @@ public class ProgramNode extends Node {
 		context.skipToken("program");
 		commandListNode = new CommandListNode();
 		commandListNode.parse(context);
+	}
+	
+	@Override
+	public void execute() throws ExecuteException {
+		commandListNode.execute();
 	}
 	
 	@Override

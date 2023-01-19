@@ -1,4 +1,4 @@
-package pri.designPattern.iterpreter;
+package pri.designPattern.iterpreter.language;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +20,13 @@ public class CommandListNode extends Node {
 				commandNode.parse(context);
 				nodeList.add(commandNode);
 			}
+		}
+	}
+	
+	@Override
+	public void execute() throws ExecuteException {
+		for(Node node : nodeList) {
+			node.execute();
 		}
 	}
 	

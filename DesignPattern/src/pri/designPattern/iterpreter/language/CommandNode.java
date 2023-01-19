@@ -1,4 +1,4 @@
-package pri.designPattern.iterpreter;
+package pri.designPattern.iterpreter.language;
 
 public class CommandNode extends Node {
 	
@@ -13,6 +13,11 @@ public class CommandNode extends Node {
 			node = new PrimitiveCommandNode();
 			node.parse(context);
 		}
+	}
+
+	@Override
+	public void execute() throws ExecuteException {
+		node.execute();
 	}
 	
 	@Override

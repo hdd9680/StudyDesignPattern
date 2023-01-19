@@ -1,4 +1,4 @@
-package pri.designPattern.iterpreter;
+package pri.designPattern.iterpreter.language;
 
 public class RepeatCommandNode extends Node {
 	
@@ -13,7 +13,14 @@ public class RepeatCommandNode extends Node {
 		commandListNode = new CommandListNode();
 		commandListNode.parse(context);
 	}
-	
+
+	@Override
+	public void execute() throws ExecuteException {
+		for(int i = 0 ; i < number ; i++) {
+			commandListNode.execute();
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "[repeat " + number + " " + commandListNode + " ]";
