@@ -58,7 +58,7 @@ public class TurtleCanvas extends Canvas implements ExecutorFactory{
 		
 		switch(direction) {
 		case DIRECTION_UP:
-			newY += length;
+			newY -= length;
 			break;
 		case DIRECTION_RIGHT:
 			newX += length;
@@ -67,7 +67,7 @@ public class TurtleCanvas extends Canvas implements ExecutorFactory{
 			newX -= length;
 			break;
 		case DIRECTION_DOWN:
-			newY -= length;
+			newY += length;
 			break;
 		}
 		
